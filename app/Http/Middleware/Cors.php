@@ -19,5 +19,18 @@ class Cors
             ->header('Access-Control-Allow-Origin', '*')
             ->header('Access-Control-Allow-Methods', 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS')
             ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+
+        //different implementation of cors mid
+//        $domains = ['http://localhost:8080'];
+//
+//        if (isset($request->server()['HTTP_ORIGIN'])) {
+//            $origin = $request->server()['HTTP_ORIGIN'];
+//            if (in_array($origin, $domains)) {
+//                header('Access-Control-Allow-Origin: ' . $origin);
+//                header('Access-Control-Allow-Headers: Origin, Content-Type, Authorization');
+//            }
+//
+//        }
     }
 }
